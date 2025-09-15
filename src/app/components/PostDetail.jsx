@@ -42,6 +42,22 @@ const PostDetail = ({ post }) => {
           </a>
         );
       }
+      case "heading-one":
+        return (
+          <h1 key={index} className="text-3xl font-bold mb-6">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </h1>
+        );
+      case "heading-two":
+        return (
+          <h2 key={index} className="text-2xl font-semibold mb-5">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </h2>
+        );
       case "heading-three":
         return (
           <h3 key={index} className="text-xl font-semibold mb-4">
@@ -49,6 +65,22 @@ const PostDetail = ({ post }) => {
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
           </h3>
+        );
+      case "heading-five":
+        return (
+          <h5 key={index} className="text-base font-semibold mb-3">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </h5>
+        );
+      case "heading-six":
+        return (
+          <h6 key={index} className="text-sm font-semibold mb-2">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </h6>
         );
       case "paragraph":
         return (
