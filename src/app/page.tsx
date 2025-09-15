@@ -4,7 +4,7 @@ import { getPaginatedPosts } from '~/services';
 
 export default async function Home() {
   const page = 1;
-  const pageSize = 10;
+  const pageSize = 5;
   const { edges, totalCount } = await getPaginatedPosts({ page, pageSize });
 
   return (

@@ -7,7 +7,7 @@ type PageProps = { params: { page: string } };
 export default async function PagedPosts({ params }: PageProps) {
   const pageParam = Number(params.page);
   const page = Number.isFinite(pageParam) && pageParam > 0 ? pageParam : 1;
-  const pageSize = 10;
+  const pageSize = 5;
   const { edges, totalCount } = await getPaginatedPosts({ page, pageSize });
 
   return (
@@ -29,7 +29,7 @@ export default async function PagedPosts({ params }: PageProps) {
 }
 
 export async function generateStaticParams() {
-  const pageSize = 10;
+  const pageSize = 5;
   // We need total count to compute number of pages. Fetch first page to get aggregate.
   const { totalCount } = await getPaginatedPosts({ page: 1, pageSize });
   const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
