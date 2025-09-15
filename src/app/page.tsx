@@ -19,7 +19,7 @@ export default async function Home() {
             <PostCard key={edge.node.slug} post={edge.node} />
           ))}
         </div>
-        <Pagination currentPage={page} totalCount={totalCount} basePath="/p" />
+        <Pagination currentPage={page} totalCount={totalCount} basePath="/p" pageSize={5} />
       </div>
     </div>
   );

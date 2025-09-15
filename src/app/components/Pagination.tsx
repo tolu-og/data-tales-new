@@ -11,7 +11,7 @@ type PaginationProps = {
 export default function Pagination({
   currentPage,
   totalCount,
-  pageSize = 10,
+  pageSize = 5,
   basePath = "/p",
 }: PaginationProps) {
   const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
